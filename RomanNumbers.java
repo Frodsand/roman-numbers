@@ -8,6 +8,10 @@ public class RomanNumbers {
     void numberOne(){
         assertEquals(romanNumber(1), "I");
     }
+    @Test
+    void numberTwo(){
+        assertEquals(romanNumber(2), "II");
+    }
 
     private String romanNumber(int number){
         if (number == 1){
