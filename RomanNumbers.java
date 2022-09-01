@@ -24,26 +24,46 @@ public class RomanNumbers {
     void numberfive(){
         assertEquals(romanNumber(5), "V");
     }
-
-
+    @Test
+    void numberSix(){
+        assertEquals(romanNumber(6), "VI");
+    }
+    @Test
+    void numberSeven(){
+        assertEquals(romanNumber(7), "VII");
+    }
+    @Test
+    void numberEight(){
+        assertEquals(romanNumber(8), "VIII");
+    }
+    @Test
+    void numberNine(){
+        assertEquals(romanNumber(9), "IX");
+    }
     private String romanNumber(int number){
-        if (number <= 3){
-
-            String total = "";
+        String total = "";
+        if (number <= 4){
+            if (number == 4){
+             total = "IV";
+             }
+            else{
             for (int i = 0; i < number; i++){
                 total += "I";
             }
-            return total;
-
+            }
         }
-        if (number == 4){
-            return "IV";
+        if (number >= 5){
+            total = "V";
+            if (number == 5){
+                return total;
+            }
+            else{
+                for (int i = 0; i < number - 5; i++) {
+                    total = total + "I";
+                }
+            }
         }
-        if (number == 5){
-            return "V";
-        }
-
-        return "";
+        return total;
 
     }
 }
