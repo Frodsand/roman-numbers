@@ -1,17 +1,18 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RomanNumbers {
     @Test
     void numberOne(){
-        assertTrue(romanNumber(1));
+        assertEquals(romanNumber(1), "I");
     }
 
-    private boolean romanNumber(int number){
+    private String romanNumber(int number){
         if (number == 1){
-            return true;
-        } return false;
-
+            return "I";
+        }
+        return "";
     }
 }
