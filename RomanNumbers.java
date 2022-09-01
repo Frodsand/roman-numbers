@@ -20,6 +20,10 @@ public class RomanNumbers {
     void numberFour(){
         assertEquals(romanNumber(4), "IV");
     }
+    @Test
+    void numberfive(){
+        assertEquals(romanNumber(5), "V");
+    }
 
 
     private String romanNumber(int number){
