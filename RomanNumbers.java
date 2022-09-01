@@ -16,6 +16,10 @@ public class RomanNumbers {
     void numberThree(){
         assertEquals(romanNumber(3), "III");
     }
+    @Test
+    void numberFour(){
+        assertEquals(romanNumber(4), "IV");
+    }
 
     private String romanNumber(int number){
         if (number == 1) return "I";
