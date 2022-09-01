@@ -21,11 +21,20 @@ public class RomanNumbers {
         assertEquals(romanNumber(4), "IV");
     }
 
+
     private String romanNumber(int number){
-        if (number == 1) return "I";
-        if (number == 2) return "II";
-        if (number == 3) return "III";
-        if (number == 4) return "IV";
+        if (number <= 3){
+
+            String total = "";
+            for (int i = 0; i < number; i++){
+                total += "I";
+            }
+            return total;
+
+        }
+        if (number == 4){
+            return "IV";
+        }
         return "";
     }
 }
