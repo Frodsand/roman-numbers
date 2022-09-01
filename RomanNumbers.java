@@ -40,6 +40,10 @@ public class RomanNumbers {
     void numberNine(){
         assertEquals(romanNumber(9), "IX");
     }
+    @Test
+    void numberTen(){
+        assertEquals(romanNumber(10), "X");
+    }
     private String romanNumber(int number){
         String total = "";
         if (number <= 4){
@@ -52,15 +56,23 @@ public class RomanNumbers {
             }
             }
         }
-        if (number >= 5){
+        if (number >= 5 && number <= 9){
             total = "V";
             if (number == 5){
                 return total;
+            }else if (number == 9){
+                return "IX";
             }
             else{
                 for (int i = 0; i < number - 5; i++) {
                     total = total + "I";
                 }
+            }
+        }
+        if(number >= 10){
+            total = "X";
+            if(number == 10){
+                return total;
             }
         }
         return total;
