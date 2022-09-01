@@ -9,6 +9,9 @@ public class RomanNumbers {
     }
 
     private boolean romanNumber(int number){
-        return true;
+        if (number == 1){
+            return true;
+        } return false;
+
     }
 }
